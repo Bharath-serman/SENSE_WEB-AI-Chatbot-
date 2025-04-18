@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# SenseWeb — AI Chatbot with DeepSeek-R1 + React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**SenseWeb** is an AI chatbot built with a **React frontend** and a **Python backend** that integrates the **DeepSeek-R1** language model locally using **Ollama**.  
+This project allows users to chat with an LLM directly in their browser, with all processing done locally — no external APIs or cloud services.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Powered By
 
-### `npm start`
+- [Ollama](https://ollama.com/) – Run LLMs locally with ease
+- [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-LLM) – Open-source LLM
+- [React.js](https://reactjs.org/) – Frontend interface
+- Python + Flask/FastAPI – Backend integration (based on your stack)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Interactive **React** UI for chatting
+- **Ollama DeepSeek-R1** model runs locally
+- Backend handles LLM response generation
+- No API keys required, works fully offline
+- Great as a starting point for building more advanced chatbots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Python 3.8+
+- Node.js & npm
+- [Ollama](https://ollama.com/) installed and running locally
+- Pull DeepSeek-R1 model:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+ollama pull deepseek-r1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### 1. Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/senseweb.git
+cd senseweb
+### 2. Set Up the Backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd server
+pip install -r requirements.txt
+python app.py
+### 3. Set Up the Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd ../client
+npm install
+npm start
+Your app should now be running at:  
+[http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
